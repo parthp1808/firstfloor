@@ -187,7 +187,7 @@
               {!! Form::close() !!}
               <div class="aa-single-advance-search">
                   
-                  <button id="bookmark" class="aa-search-btn" value ="{{ Auth::user()->bookmarks->contains($property->id) ? 'true' : 'false' }}">{{ Auth::user()->bookmarks->contains($property->id) ? 'Bookmarked' : 'Bookmark this property!' }}</button>
+                  <button id="bookmark" class="aa-search-btn" value ="{{ Auth::check() && Auth::user()->bookmarks->contains($property->id) ? 'true' : 'false' }}">{{ Auth::check() && Auth::user()->bookmarks->contains($property->id) ? 'Bookmarked' : 'Bookmark this property!' }}</button>
               </div>
             </div> 
             <!-- Start Single properties sidebar -->
@@ -259,6 +259,8 @@
 
         $('#bookmark').click(function(){
 
+          @if(Auth::check())
+
           if($('#bookmark').val() == 'false')
           {
               $.ajax(
@@ -304,6 +306,11 @@
               });
           }
 
+          @else 
+
+            alert("Login to bookmark this property!")
+
+          @endif
            
 
         });

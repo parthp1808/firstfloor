@@ -11,20 +11,20 @@
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 
     <!-- Font awesome -->
-    <link href="/css/font-awesome.css" rel="stylesheet">
+    <link href="{{ asset('css/font-awesome.css') }}" rel="stylesheet">
     <!-- Bootstrap -->
-    <link href="/css/bootstrap.css" rel="stylesheet">   
+    <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">   
     <!-- slick slider -->
-    <link rel="stylesheet" type="text/css" href="/css/slick.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/slick.css') }}">
     <!-- price picker slider -->
-    <link rel="stylesheet" type="text/css" href="/css/nouislider.css"> 
-    <link rel="stylesheet" type="text/css" href="/css/range.css"> 
-    <link rel="stylesheet" type="text/css" href="/css/range2.css"> 
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/nouislider.css') }}"> 
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/range.css') }}"> 
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/range2.css') }}"> 
     <!-- Theme color -->
-    <link id="switcher" href="/css/theme-color/default-theme.css" rel="stylesheet">     
+    <link id="switcher" href="{{ asset('css/theme-color/default-theme.css') }}" rel="stylesheet">     
 
     <!-- Main style sheet -->
-    <link href="/css/style.css" rel="stylesheet">    
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">    
 
      @if (Route::getCurrentRoute()->uri() == '/')
           
@@ -64,11 +64,11 @@
   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
   crossorigin="anonymous"></script>
 
-  <script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places"></script>
+  <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCKYD3Ng92QBY12d8PmR8vuRfZaV8NseZ0&sensor=false&amp;libraries=places"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="/js/bootstrap.js"></script>
-  <script src="/js/jquery.geocomplete.min.js"></script>   
-  <script src="/js/range.js"></script>
+  <script src="{{ asset('js/bootstrap.js') }}"></script>
+  <script src="{{ asset('js/jquery.geocomplete.min.js') }}"></script>   
+  <script src="{{ asset('js/range.js') }}"></script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -252,12 +252,12 @@
   <!-- jQuery library -->
  
   <!-- slick slider -->
-  <script type="text/javascript" src="/js/slick.js"></script>
+  <script type="text/javascript" src="{{ asset('js/slick.js') }}"></script>
   <!-- Price picker slider -->
-  <script type="text/javascript" src="/js/nouislider.js"></script>
+  <script type="text/javascript" src="{{ asset('js/nouislider.js') }}"></script>
   
   <!-- Custom js -->
-  <script src="/js/custom.js"></script> 
+  <script src="{{ asset('js/custom.js') }}"></script> 
 
   </body>
 </html>
