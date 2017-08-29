@@ -24,8 +24,9 @@ DB_CONNECTION=mysql<br/>
 Now , run => <b>php artisan migrate</b>
 
 Now set file permissions:
-<b>sudo chgrp -R www-data storage bootstrap/cache
-sudo chmod -R ug+rwx storage bootstrap/cache</b>
+<b>sudo chgrp -R www-data storage bootstrap/cache<br/>
+sudo chmod -R ug+rwx storage bootstrap/cache<br/>
+chmod 777 -R public</b>
 
 Now run this command to generate new key
 
