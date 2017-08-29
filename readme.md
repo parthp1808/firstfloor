@@ -21,5 +21,17 @@ DB_CONNECTION=mysql<br/>
  DB_PASSWORD=secret</i>
 
 
-Now atlast, run => <b>php artisan migrate</b>
+Now , run => <b>php artisan migrate</b>
+
+Now set file permissions:
+<b>sudo chgrp -R www-data storage bootstrap/cache
+sudo chmod -R ug+rwx storage bootstrap/cache</b>
+
+Now run this command to generate new key
+
+<b>php artisan key:generate</b>
+
+and the clear config cache using
+
+<b>php artisan config:clear</b>
 
